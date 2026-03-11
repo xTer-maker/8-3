@@ -3,151 +3,343 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Chúc Mừng Ngày 8/3</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    line-height:1.6;
+background:#fff6f9;
+color:#333;
+overflow-x:hidden;
 }
 
-header{
-    background: linear-gradient(135deg,#ff6fa5,#ff9ac4);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#ff4f8b;
+padding:15px;
+text-align:center;
+z-index:1000;
 }
 
-header h1{
-    font-size:42px;
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
 }
 
-header p{
-    font-size:18px;
+/* HERO */
+
+.hero{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1492724441997-5dc865305da7") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:50px;
+background:rgba(0,0,0,0.45);
+padding:25px;
+border-radius:10px;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:white;
-    color:#ff4f8b;
-    text-decoration:none;
-    border-radius:25px;
-    font-weight:bold;
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:#ff4f8b;
+color:white;
+border-radius:30px;
+text-decoration:none;
 }
+
+/* SECTION */
 
 section{
-    padding:60px 20px;
-    max-width:1000px;
-    margin:auto;
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
+.title{
+text-align:center;
+font-size:32px;
+margin-bottom:40px;
+color:#ff4f8b;
 }
+
+/* FEATURES */
 
 .features{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .feature{
-    flex:1;
-    min-width:250px;
-    background:#f9f9f9;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+text-align:center;
 }
 
-.wishes{
-    background:#fff0f6;
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
 }
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* VIDEO */
+
+.video{
+text-align:center;
+}
+
+iframe{
+width:100%;
+max-width:800px;
+height:450px;
+border-radius:10px;
+}
+
+/* WISH */
 
 .wish{
-    margin-bottom:20px;
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* FOOTER */
 
 footer{
-    background:#333;
-    color:white;
-    text-align:center;
-    padding:20px;
+background:#ff4f8b;
+color:white;
+text-align:center;
+padding:25px;
 }
-</style>
 
+/* ANIMATION */
+
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* FLOWER EFFECT */
+
+.flower{
+position:fixed;
+top:-50px;
+font-size:24px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-10vh) rotate(0deg);
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-<h1>🌸 Chúc Mừng Ngày Quốc Tế Phụ Nữ 8/3</h1>
-<p>Tôn vinh những người phụ nữ tuyệt vời trong cuộc sống của chúng ta.</p>
-<a href="#loichuc" class="btn">Gửi Lời Chúc</a>
-</header>
+<nav>
+<a href="#">Trang chủ</a>
+<a href="#about">Ý nghĩa</a>
+<a href="#gallery">Hình ảnh</a>
+<a href="#video">Video</a>
+<a href="#wish">Lời chúc</a>
+</nav>
 
-<section>
-<h2 class="section-title">Ý Nghĩa Ngày 8/3</h2>
+<!-- HERO -->
+
+<div class="hero">
+
+<div>
+<h1>🌸 Chúc Mừng Ngày Quốc Tế Phụ Nữ 8/3 🌸</h1>
+<a class="btn" href="#wish">Gửi lời chúc</a>
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about" class="hidden">
+
+<h2 class="title">Ý Nghĩa Ngày 8/3</h2>
+
 <p>
-Ngày 8/3 là dịp để tôn vinh những đóng góp quan trọng của phụ nữ trong gia đình và xã hội.
-Đây cũng là thời điểm để gửi lời cảm ơn, sự trân trọng và những lời chúc tốt đẹp
-đến mẹ, vợ, chị em và đồng nghiệp nữ.
+Ngày 8/3 là dịp để tôn vinh những người phụ nữ tuyệt vời trong cuộc sống.
+Họ mang đến tình yêu thương, sự hy sinh và nguồn cảm hứng cho thế giới.
 </p>
+
 </section>
 
-<section>
-<h2 class="section-title">💖 Tôn Vinh Phụ Nữ</h2>
+<!-- FEATURES -->
+
+<section class="hidden">
+
+<h2 class="title">💖 Tôn Vinh Phụ Nữ</h2>
 
 <div class="features">
 
 <div class="feature">
 <h3>🌷 Yêu Thương</h3>
-<p>Phụ nữ mang đến sự ấm áp và yêu thương cho gia đình và xã hội.</p>
+<p>Phụ nữ mang lại sự ấm áp và yêu thương cho gia đình.</p>
 </div>
 
 <div class="feature">
 <h3>🌷 Mạnh Mẽ</h3>
-<p>Phụ nữ ngày nay độc lập, tự tin và luôn vượt qua mọi thử thách.</p>
+<p>Phụ nữ ngày nay tự tin, độc lập và đầy bản lĩnh.</p>
 </div>
 
 <div class="feature">
 <h3>🌷 Truyền Cảm Hứng</h3>
-<p>Họ là nguồn động lực và cảm hứng cho sự phát triển của thế giới.</p>
+<p>Họ là nguồn động lực giúp thế giới tốt đẹp hơn.</p>
 </div>
 
-</div>
-</section>
-
-<section id="loichuc" class="wishes">
-<h2 class="section-title">💌 Lời Chúc 8/3</h2>
-
-<div class="wish">
-<p>🌸 Chúc bạn luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống.</p>
-</div>
-
-<div class="wish">
-<p>🌸 Chúc tất cả phụ nữ luôn được yêu thương và trân trọng mỗi ngày.</p>
-</div>
-
-<div class="wish">
-<p>🌸 Chúc mẹ luôn mạnh khỏe, vui vẻ và là người phụ nữ tuyệt vời nhất.</p>
 </div>
 
 </section>
 
-<section style="text-align:center;">
-<h2>🎁 Gửi Lời Chúc Đến Người Phụ Nữ Bạn Yêu Thương</h2>
-<p>Một lời chúc nhỏ hôm nay có thể mang lại niềm vui lớn cho họ.</p>
-<a href="#" class="btn">Gửi Lời Chúc</a>
+<!-- GALLERY -->
+
+<section id="gallery" class="hidden">
+
+<h2 class="title">📸 Hình Ảnh</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+<img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+
+</div>
+
+</section>
+
+<!-- VIDEO -->
+
+<section id="video" class="hidden">
+
+<h2 class="title">🎥 Video Chúc Mừng</h2>
+
+<div class="video">
+
+<iframe src="https://www.youtube.com/embed/VQtonf1fv_s"
+allowfullscreen></iframe>
+
+</div>
+
+</section>
+
+<!-- WISH -->
+
+<section id="wish" class="hidden">
+
+<h2 class="title">💌 Lời Chúc 8/3</h2>
+
+<div class="wish">🌸 Chúc bạn luôn xinh đẹp và hạnh phúc.</div>
+<div class="wish">🌸 Chúc mọi phụ nữ luôn được yêu thương.</div>
+<div class="wish">🌸 Chúc mẹ luôn mạnh khỏe và vui vẻ.</div>
+<div class="wish">🌸 Mong rằng mỗi ngày của bạn đều tràn ngập niềm vui.</div>
+
 </section>
 
 <footer>
-<p>© 2026 - Chúc Mừng Ngày 8/3 🌸</p>
+
+<p>🌸 Chúc Mừng Ngày 8/3 🌸</p>
+<p>Lan tỏa yêu thương đến mọi phụ nữ</p>
+
 </footer>
+
+<script>
+
+/* SCROLL ANIMATION */
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show")
+}
+})
+})
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el)
+})
+
+/* FLOWER RAIN */
+
+function createFlower(){
+
+const flower=document.createElement("div")
+
+flower.classList.add("flower")
+
+flower.innerHTML="🌸"
+
+flower.style.left=Math.random()*100+"vw"
+
+flower.style.animationDuration=3+Math.random()*5+"s"
+
+flower.style.fontSize=20+Math.random()*20+"px"
+
+document.body.appendChild(flower)
+
+setTimeout(()=>{
+flower.remove()
+},8000)
+
+}
+
+setInterval(createFlower,300)
+
+</script>
 
 </body>
 </html>
